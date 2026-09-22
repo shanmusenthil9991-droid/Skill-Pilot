@@ -28,16 +28,17 @@ def main():
     # 2. Check if DB and ML models exist, if not seed
     db_path = os.path.join(base_dir, "skillpilot.db")
     model_path = os.path.join(base_dir, "backend", "app", "ml", "saved_models", "random_forest_model.joblib")
+    backend_dir = os.path.join(base_dir, "backend")
     if not os.path.exists(db_path) or not os.path.exists(model_path):
         print("\n[2/3] Seeding relational database & training ML models...")
-        subprocess.run([sys.executable, "-m", "backend.app.database.seed"], check=True)
+        subprocess.run([sys.executable, "-m", "app.database.seed"], cwd=backend_dir, check=True)
     else:
         print("\n[2/3] Database & ML models verified.")
 
     # 3. Start Backend
     print("\n[3/3] Starting Backend & Frontend servers...")
-    backend_cmd = [sys.executable, "-m", "uvicorn", "backend.app.main:app", "--host", "127.0.0.1", "--port", "8000", "--reload"]
-    backend_proc = subprocess.Popen(backend_cmd, cwd=base_dir)
+    backend_cmd = [sys.executable, "-m", "uvicorn", "app.main:app", "--host", "127.0.0.1", "--port", "8000", "--reload"]
+    backend_proc = subprocess.Popen(backend_cmd, cwd=backend_dir)
     print("   ✓ FastAPI Backend running at:  http://127.0.0.1:8000")
     print("   ✓ Interactive API Docs at:     http://127.0.0.1:8000/docs")
 
