@@ -1,0 +1,118 @@
+{
+  "dataset_size": 5000,
+  "train_size": 4000,
+  "test_size": 1000,
+  "features_count": 23,
+  "models": [
+    {
+      "model_name": "Random Forest Classifier (Ensemble)",
+      "model_type": "Ensemble Forest",
+      "accuracy": 0.954,
+      "precision": 0.9539,
+      "recall": 0.9772,
+      "f1_score": 0.9654,
+      "roc_auc": 0.9912,
+      "confusion_matrix": [
+        [
+          312,
+          31
+        ],
+        [
+          15,
+          642
+        ]
+      ],
+      "feature_importance": {
+        "online_contest_rating": 0.1498,
+        "software_skill_gaps": 0.1233,
+        "programming_score": 0.1099,
+        "dsa_score": 0.1062,
+        "online_problems_solved": 0.0796,
+        "projects_count": 0.0646,
+        "online_contests_count": 0.0558,
+        "logical_score": 0.0504,
+        "internships_tasks_completed": 0.0324,
+        "internships_count": 0.0305,
+        "aptitude_score": 0.0293,
+        "projects_avg_completion": 0.0236,
+        "communication_score": 0.0201,
+        "cgpa": 0.0197,
+        "verbal_score": 0.0189,
+        "online_coding_streak": 0.0187,
+        "attendance_pct": 0.0159,
+        "training_hours_total": 0.015,
+        "backlog_count": 0.014,
+        "core_ece_score": 0.0089,
+        "online_coding_accuracy": 0.0082,
+        "certifications_count": 0.0037,
+        "core_ece_skill_gaps": 0.0017
+      }
+    },
+    {
+      "model_name": "Decision Tree Classifier",
+      "model_type": "Tree-based Interpretable",
+      "accuracy": 0.944,
+      "precision": 0.9505,
+      "recall": 0.965,
+      "f1_score": 0.9577,
+      "roc_auc": 0.963,
+      "confusion_matrix": [
+        [
+          310,
+          33
+        ],
+        [
+          23,
+          634
+        ]
+      ]
+    },
+    {
+      "model_name": "Logistic Regression (Linear Baseline)",
+      "model_type": "Linear Classifier",
+      "accuracy": 0.967,
+      "precision": 0.9713,
+      "recall": 0.9787,
+      "f1_score": 0.975,
+      "roc_auc": 0.997,
+      "confusion_matrix": [
+        [
+          324,
+          19
+        ],
+        [
+          14,
+          643
+        ]
+      ]
+    }
+  ],
+  "feature_importance": {
+    "online_contest_rating": 0.1498,
+    "software_skill_gaps": 0.1233,
+    "programming_score": 0.1099,
+    "dsa_score": 0.1062,
+    "online_problems_solved": 0.0796,
+    "projects_count": 0.0646,
+    "online_contests_count": 0.0558,
+    "logical_score": 0.0504,
+    "internships_tasks_completed": 0.0324,
+    "internships_count": 0.0305,
+    "aptitude_score": 0.0293,
+    "projects_avg_completion": 0.0236,
+    "communication_score": 0.0201,
+    "cgpa": 0.0197,
+    "verbal_score": 0.0189,
+    "online_coding_streak": 0.0187,
+    "attendance_pct": 0.0159,
+    "training_hours_total": 0.015,
+    "backlog_count": 0.014,
+    "core_ece_score": 0.0089,
+    "online_coding_accuracy": 0.0082,
+    "certifications_count": 0.0037,
+    "core_ece_skill_gaps": 0.0017
+  },
+  "best_model_name": "Random Forest Classifier (Ensemble)",
+  "best_model_accuracy": 0.954,
+  "best_model_f1": 0.9654
+}
